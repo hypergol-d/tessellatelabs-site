@@ -15,8 +15,9 @@ body {
 }
 
 .box {
-	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+	background: black;
+	margin: auto; 
+	padding: 8px;
 }
 
 .lightbox {
@@ -45,19 +46,47 @@ div.vertical {
 	width: 100%;
 }
 
-::-webkit-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-::-moz-placeholder {
-   color: #955;
-   text-align: center;
+::placeholder {
+  color: green;
+  opacity: 1;
+  text-align: center;
 }
 
 :-ms-input-placeholder {
-   color: #955;
-   text-align: center;
+  color: green;
+  text-align: center;
+}
+
+::-ms-input-placeholder {
+  color: green;
+  text-align: center;
+}
+
+input#password {
+	background-color: black;
+	color: lightgreen;
+	border-color: green;
+	outline: none;
+}
+
+input#password:focus {
+	border-color: lightgreen;
+}
+
+button#loginbutton {
+	background-color: black;
+	color: green;
+	border-width: 2px;
+	border-color: green;
+}
+
+button#loginbutton:hover {
+	color: lightgreen;
+	border-color: lightgreen;
+}
+
+button#loginbutton:active {
+	border-style: inset;
 }
 
 </style>
