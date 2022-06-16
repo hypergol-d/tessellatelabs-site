@@ -46,6 +46,9 @@ body {
 div.horizontal {
 	display: flex;
 	justify-content: center;
+}
+
+div.horizontalgroup {
 	height: 100%;
 }
 
@@ -109,22 +112,24 @@ button#loginbutton:active {
 <body>
 
 	<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<pre style="text-align: center">
+		<div class="horizontalgroup">
+			<div class="horizontal">
+				<pre style="text-align: center">
  _                          _  _         _         
 | |_   ___  ___  ___   ___ | || |  __ _ | |_   ___ 
 | __| / _ \/ __|/ __| / _ \| || | / _` || __| / _ \
 | |_ |  __/\__ \\__ \|  __/| || || (_| || |_ |  __/
  \__| \___||___/|___/ \___||_||_| \__,_| \__| \___|
-                                                   
-			</pre>
-		</div>
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">
-					<input style="text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
+												   
+				</pre>
+			</div>
+			<div class="horizontal">
+				<div class="vertical">
+					<div class="box">
+						<input style="text-align: center;" id="password" type="password" placeholder="password" /> <br />
+						<button id="loginbutton" type="button">Enter</button>
+						<p id="wrongPassword" style="display: none">wrong password</p>
+					</div>
 				</div>
 			</div>
 		</div>
