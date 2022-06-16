@@ -19,18 +19,6 @@ body {
 	overflow: hidden;
 	padding: 2rem;
 	color: white;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background: repeating-linear-gradient(
-		0deg,
-		rgba(black, 0.15),
-		rgba(black, 0.15) 1px,
-		transparent 1px,
-		transparent 2px
-	);
 }
 
 .box {
@@ -118,14 +106,20 @@ button#loginbutton:active {
 
 <body>
 
-	<pre>
+	<div id="companyname">
+		<div class="horizontal">
+			<div class="vertical">
+				<pre>
  _                          _  _         _         
 | |_   ___  ___  ___   ___ | || |  __ _ | |_   ___ 
 | __| / _ \/ __|/ __| / _ \| || | / _` || __| / _ \
 | |_ |  __/\__ \\__ \|  __/| || || (_| || |_ |  __/
  \__| \___||___/|___/ \___||_||_| \__,_| \__| \___|
                                                    
-	</pre>
+				</pre>
+			</div>
+		</div>
+	</div>
 
 	<div id="loginbox" class="lightbox" >
 		<div class="horizontal">
