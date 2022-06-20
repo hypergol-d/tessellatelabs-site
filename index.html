@@ -143,23 +143,23 @@ button#loginbutton:active {
 						</form>
 					</div>
 					<div class="box">
-						<form name="gform2" id="gform2" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd7GBGg-ACTFuVSoB7ToVXfI6rfAMtpRwBLPVJHhySXoURoFg/formresponse?" target="hidden_iframe" onsubmit="submitted=true;">
-							contact<br>
+						<form name="gform2" id="gform2" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd7GBGg-ACTFuVSoB7ToVXfI6rfAMtpRwBLPVJHhySXoURoFg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+							<p>contact</p><br>
                             <div class="vertical">
                             	<div>
                                 	<label for="entry.437661451">name:</label>
-									<input type="text" name="entry.437661451" id="entry.437661451"><br>
+									<input type="text" name="entry.437661451" id="entry.437661451" required><br>
                                 <div>
                                 	<label for="entry.2124189112">organization:</label>
 									<input type="text" name="entry.2124189112" id="entry.2124189112"><br>
                                 </div>
                                 <div>
                                 	<label for="entry.1818372476">email:</label>
-									<input type="text" name="entry.1818372476" id="entry.1818372476"><br>
+									<input type="text" name="entry.1818372476" id="entry.1818372476" required><br>
                                 </div>
                                 <div>
                                 	<label for="entry.1620713003">message:</label>
-									<input type="text" name="entry.1620713003" id="entry.1620713003"><br>
+									<input type="text" name="entry.1620713003" id="entry.1620713003" required><br>
                                 </div>
                             <input type="submit" value="submit">
                             </div>
@@ -172,8 +172,15 @@ button#loginbutton:active {
 
 
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+	<script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+    $('#gform2').on('submit', function(e) {
+      $('#gform2 *').fadeOut(2000);
+      $('#gform2').prepend('your submission has been processed...');
+      });
+    </script>
 
 	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 
