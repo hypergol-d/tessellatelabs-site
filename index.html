@@ -112,12 +112,12 @@ input:focus {
 	border-style: inset;
 }
 
-.formtitlesubmit {
+.formtitle {
 	margin: 0;
 }
 
-form  {
-	display: table;
+.formsubmit {
+	margin: 0;
 }
 
 .forminput {
@@ -138,7 +138,7 @@ input {
 <body>
 
 	<div id="loginbox" class="lightbox" >
-		<div class="vertical">
+		<div class="column">
 			<div class="horizontal">
 				<pre style="text-align: center; font-size: 2vmin;">
  _                          _  _         _         
@@ -157,18 +157,18 @@ input {
 						<p id="wrongPassword" style="display: none">wrong password</p>
 					</div>
 					<div class="box">
-                    	<p class="formtitlesubmit">sign up for updates</p>
+                    	<p class="formtitle">sign up for updates</p>
 						<form name="gform1" id="gform1" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe9Mp9V8OvbHLjt_gfYgw1FuMlhaiaxlzmBjl0WKUdX5wiQtg/formResponse?" target="hidden_iframe1" onsubmit="submitted1=true">
 							<p class="forminput">
                             	<label for="entry.853458270">email:</label>
                             	<input type="text" name="entry.853458270" id="entry.853458270"><br>
                             </p>
+                            <p class="formsubmit"><input type="submit" id="button" value="submit"></p>
 						</form>
                         <iframe name="hidden_iframe1" id="hidden_iframe1" style="display:none;" onload="if(submitted1) {}"></iframe>
-                        <p class="formtitlesubmit"><input type="submit" id="button" value="submit"></p>
 					</div>
 					<div class="box">
-                    	<p class="formtitlesubmit"><td colspan="100%">contact</td></p>
+                    	<p class="formtitle">contact</p>
 						<form name="gform2" id="gform2" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd7GBGg-ACTFuVSoB7ToVXfI6rfAMtpRwBLPVJHhySXoURoFg/formResponse?" target="hidden_iframe2" onsubmit="submitted2=true;">
                           <p class="forminput">
                             <label for="entry.437661451">name:</label>
@@ -186,9 +186,9 @@ input {
                             <label for="entry.1620713003">message:</label>
                             <input type="text" name="entry.1620713003" id="entry.1620713003" required><br>
                           </p>
+                          <p class="formsubmit"><input type="submit" id="button" value="submit"></p>
 						</form>
                         <iframe name="hidden_iframe2" id="hidden_iframe2" style="display:none;" onload="if(submitted2) {}"></iframe>
-                        <p class="formtitlesubmit"><input type="submit" id="button" value="submit"></p>
 					</div>
 				</div>
 			</div>
@@ -202,16 +202,16 @@ input {
 	<script type="text/javascript">var submitted1=false;</script>
     <script type="text/javascript">
     $('#gform1').on('submit', function(e) {
-      $('#gform1 *').fadeOut(2000);
-      $('#gform1').prepend('your submission has been processed...');
+      $('#gform1 *').remove();
+      $('#gform1').prepend('<br>your submission has been processed...').fadeIn(2000);
       });
     </script>
     
     <script type="text/javascript">var submitted2=false;</script>
     <script type="text/javascript">
     $('#gform2').on('submit', function(e) {
-      $('#gform2 *').fadeOut(2000);
-      $('#gform2').prepend('your submission has been processed...');
+      $('#gform2 *').remove();
+      $('#gform2').prepend('<br>your submission has been processed...').fadeIn(2000);
       });
     </script>
 
