@@ -24,6 +24,8 @@ body {
 .box {
 	background: black;
 	margin: auto; 
+    margin-top: 10px;
+  	margin-bottom: 10px;
 	padding: 8px;
 	border-width: 2px;
 	border-style: outset;
@@ -107,6 +109,10 @@ button#loginbutton:active {
 	border-style: inset;
 }
 
+.formtitle {
+	margin: 0;
+}
+
 
 
 </style>
@@ -133,18 +139,18 @@ button#loginbutton:active {
 						<p id="wrongPassword" style="display: none">wrong password</p>
 					</div>
 					<div class="box">
-						<form name="gform" id="gform" enctype="text/plain" action="docs link">
-							sign up for updates<br>
-							<div class="horizontal">
-                            	<p>email:</p>
-                            	<input type="text" name="entry.#########" id="entry.#########"><br>
+						<form name="gform1" id="gform1" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe9Mp9V8OvbHLjt_gfYgw1FuMlhaiaxlzmBjl0WKUdX5wiQtg/formResponse?" target="hidden_iframe" onsubmit="submitted1=true">
+							<p class="formtitle">sign up for updates</p>
+							<div>
+                            	<label for="entry.853458270">email:</label>
+                            	<input type="text" name="entry.853458270" id="entry.853458270"><br>
                             </div>
 							<input type="submit" value="submit">
 						</form>
 					</div>
 					<div class="box">
-						<form name="gform2" id="gform2" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd7GBGg-ACTFuVSoB7ToVXfI6rfAMtpRwBLPVJHhySXoURoFg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-							<p>contact</p><br>
+						<form name="gform2" id="gform2" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd7GBGg-ACTFuVSoB7ToVXfI6rfAMtpRwBLPVJHhySXoURoFg/formResponse?" target="hidden_iframe" onsubmit="submitted2=true;">
+							<p class="formtitle">contact</p>
                             <div class="vertical">
                             	<div>
                                 	<label for="entry.437661451">name:</label>
@@ -174,7 +180,15 @@ button#loginbutton:active {
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-	<script type="text/javascript">var submitted=false;</script>
+	<script type="text/javascript">var submitted1=false;</script>
+    <script type="text/javascript">
+    $('#gform1').on('submit', function(e) {
+      $('#gform1 *').fadeOut(2000);
+      $('#gform1').prepend('your submission has been processed...');
+      });
+    </script>
+    
+    <script type="text/javascript">var submitted2=false;</script>
     <script type="text/javascript">
     $('#gform2').on('submit', function(e) {
       $('#gform2 *').fadeOut(2000);
