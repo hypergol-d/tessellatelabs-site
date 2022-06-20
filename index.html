@@ -16,7 +16,6 @@ body {
 		rgba(0, 150, 0, 0.35), black 120%
 	);
 	margin: 0;
-	overflow: hidden;
 	padding: 2rem;
 	color: white;
 	height: 100vh;
@@ -28,16 +27,16 @@ body {
 	padding: 8px;
 	border-width: 2px;
 	border-style: outset;
-	border-color: green
+	border-color: green;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
 }
 
 .lightbox {
 	zoom: 1.5;
-	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 	text-align: center;
 	margin: auto;
 
@@ -136,22 +135,34 @@ button#loginbutton:active {
 					<div class="box">
 						<form name="gform" id="gform" enctype="text/plain" action="docs link">
 							sign up for updates<br>
-							email:
-                            <input type="text" name="entry.#########" id="entry.#########"><br>
+							<div class="horizontal">
+                            	<p>email:</p>
+                            	<input type="text" name="entry.#########" id="entry.#########"><br>
+                            </div>
 							<input type="submit" value="submit">
 						</form>
 					</div>
 					<div class="box">
 						<form>
 							contact<br>
-							name:
-							<input type="text" name="entry.#########" id="entry.#########"><br>
-							organization:
-							<input type="text" name="entry.#########" id="entry.#########"><br>
-							email:
-							<input type="text" name="entry.#########" id="entry.#########"><br>
-							message:
-							<input type="text" name="entry.#########" id="entry.#########"><br>
+                            <div class="vertical">
+                            	<div class="horizontal">
+                                	<p>name</p>
+									<input type="text" name="entry.#########" id="entry.#########"><br>
+                                </div>
+                                <div class="horizontal">
+                                	<p>organization:</p>
+									<input type="text" name="entry.#########" id="entry.#########"><br>
+                                </div>
+                                <div class="horizontal">
+                                	<p>email:</p>
+									<input type="text" name="entry.#########" id="entry.#########"><br>
+                                </div>
+                                <div class="horizontal">
+                                	<p>message:</p>
+									<input type="text" name="entry.#########" id="entry.#########"><br>
+                                </div>
+                            </div>
 							<input type="submit" value="submit">
 						</form>
 					</div>
