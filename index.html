@@ -92,7 +92,7 @@ input:focus {
 	border-color: lightgreen;
 }
 
-button#loginbutton {
+#button {
 	background-color: black;
 	color: green;
 	border-width: 2px;
@@ -100,20 +100,35 @@ button#loginbutton {
 	outline: none;
 }
 
-button#loginbutton:hover {
+#button:hover {
 	color: lightgreen;
 	border-color: lightgreen;
 }
 
-button#loginbutton:active {
+#button:active {
 	border-style: inset;
 }
 
-.formtitle {
+.formtitlesubmit {
 	margin: 0;
 }
 
+form  {
+	display: table;
+}
 
+.forminput {
+	display: table-row;
+}
+
+label {
+	display: table-cell;
+    text-align: right;
+}
+
+input {
+	display: table-cell;
+}
 
 </style>
 
@@ -135,41 +150,40 @@ button#loginbutton:active {
 				<div class="vertical">
 					<div class="box">
 						<input style="text-align: center;" id="password" type="password" placeholder="password" /> <br />
-						<button id="loginbutton" type="button">enter</button>
+						<button id="button" type="button">enter</button>
 						<p id="wrongPassword" style="display: none">wrong password</p>
 					</div>
 					<div class="box">
+                    	<p class="formtitlesubmit">sign up for updates</p>
 						<form name="gform1" id="gform1" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe9Mp9V8OvbHLjt_gfYgw1FuMlhaiaxlzmBjl0WKUdX5wiQtg/formResponse?" target="hidden_iframe" onsubmit="submitted1=true">
-							<p class="formtitle">sign up for updates</p>
-							<div>
+							<p class="forminput">
                             	<label for="entry.853458270">email:</label>
                             	<input type="text" name="entry.853458270" id="entry.853458270"><br>
-                            </div>
-							<input type="submit" value="submit">
+                            </p>
 						</form>
+                        <p class="formtitlesubmit"><input type="submit" id="button" value="submit"></p>
 					</div>
 					<div class="box">
+                    	<p class="formtitlesubmit"><td colspan="100%">contact</td></p>
 						<form name="gform2" id="gform2" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd7GBGg-ACTFuVSoB7ToVXfI6rfAMtpRwBLPVJHhySXoURoFg/formResponse?" target="hidden_iframe" onsubmit="submitted2=true;">
-							<p class="formtitle">contact</p>
-                            <div class="vertical">
-                            	<div>
-                                	<label for="entry.437661451">name:</label>
-									<input type="text" name="entry.437661451" id="entry.437661451" required><br>
-                                <div>
-                                	<label for="entry.2124189112">organization:</label>
-									<input type="text" name="entry.2124189112" id="entry.2124189112"><br>
-                                </div>
-                                <div>
-                                	<label for="entry.1818372476">email:</label>
-									<input type="text" name="entry.1818372476" id="entry.1818372476" required><br>
-                                </div>
-                                <div>
-                                	<label for="entry.1620713003">message:</label>
-									<input type="text" name="entry.1620713003" id="entry.1620713003" required><br>
-                                </div>
-                            <input type="submit" value="submit">
-                            </div>
+                          <p class="forminput">
+                            <label for="entry.437661451">name:</label>
+                            <input type="text" name="entry.437661451" id="entry.437661451" required><br>
+                          </p>
+                          <p class="forminput">
+                            <label for="entry.2124189112">org:</label>
+                            <input type="text" name="entry.2124189112" id="entry.2124189112"><br>
+                          </p>
+                          <p class="forminput">
+                            <label for="entry.1818372476">email:</label>
+                            <input type="text" name="entry.1818372476" id="entry.1818372476" required><br>
+                          </p>
+                          <p class="forminput">
+                            <label for="entry.1620713003">message:</label>
+                            <input type="text" name="entry.1620713003" id="entry.1620713003" required><br>
+                          </p>
 						</form>
+                        <p class="formtitlesubmit"><input type="submit" id="button" value="submit"></p>
 					</div>
 				</div>
 			</div>
